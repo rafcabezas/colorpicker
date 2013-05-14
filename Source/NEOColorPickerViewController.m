@@ -34,7 +34,7 @@
     NSMutableArray *_colorArray;
 }
 
-@property (nonatomic, weak) CALayer *selectedColorLayer;
+@property (nonatomic, unsafe_unretained) CALayer *selectedColorLayer;
 @property (nonatomic, strong) UIColor* savedColor;
 
 @end

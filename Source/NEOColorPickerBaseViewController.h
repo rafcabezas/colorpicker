@@ -50,7 +50,7 @@
 
 @interface NEOColorPickerBaseViewController : UIViewController
 
-@property (nonatomic, weak) id <NEOColorPickerViewControllerDelegate> delegate;
+@property (nonatomic, unsafe_unretained) id <NEOColorPickerViewControllerDelegate> delegate;
 
 @property (nonatomic, strong) UIColor *selectedColor;
 @property (nonatomic, assign) BOOL disallowOpacitySelection;

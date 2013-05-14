@@ -29,7 +29,7 @@
 
 @interface NEOColorPickerGradientView()
 
-@property (nonatomic, weak) UIImageView *selectorView;
+@property (nonatomic, unsafe_unretained) UIImageView *selectorView;
 
 @end
 

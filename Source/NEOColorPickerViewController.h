@@ -26,12 +26,12 @@
 
 @interface NEOColorPickerViewController : NEOColorPickerBaseViewController
 
-@property (weak, nonatomic) IBOutlet UIView *simpleColorGrid;
-@property (weak, nonatomic) IBOutlet UIButton *buttonHue;
-@property (weak, nonatomic) IBOutlet UIButton *buttonAddFavorite;
-@property (weak, nonatomic) IBOutlet UIButton *buttonFavorites;
-@property (weak, nonatomic) IBOutlet UIButton *buttonHueGrid;
-@property (weak, nonatomic) IBOutlet UILabel *selectedColorLabel;
+@property (unsafe_unretained, nonatomic) IBOutlet UIView *simpleColorGrid;
+@property (unsafe_unretained, nonatomic) IBOutlet UIButton *buttonHue;
+@property (unsafe_unretained, nonatomic) IBOutlet UIButton *buttonAddFavorite;
+@property (unsafe_unretained, nonatomic) IBOutlet UIButton *buttonFavorites;
+@property (unsafe_unretained, nonatomic) IBOutlet UIButton *buttonHueGrid;
+@property (unsafe_unretained, nonatomic) IBOutlet UILabel *selectedColorLabel;
 @property (nonatomic, strong) NSString* favoritesTitle;
 
 - (IBAction)buttonPressHue:(id)sender;

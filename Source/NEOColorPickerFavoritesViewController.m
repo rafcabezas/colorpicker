@@ -28,7 +28,7 @@
 
 @interface NEOColorPickerFavoritesViewController () <UIScrollViewDelegate>
 
-@property (nonatomic, weak) CALayer *selectedColorLayer;
+@property (nonatomic, unsafe_unretained) CALayer *selectedColorLayer;
 
 @end
 

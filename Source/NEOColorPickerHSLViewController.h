@@ -32,20 +32,20 @@
 
 @interface NEOColorPickerHSLViewController : NEOColorPickerBaseViewController
 
-@property (weak, nonatomic) IBOutlet UIImageView *hueImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *hueCrosshair;
-@property (weak, nonatomic) IBOutlet NEOColorPickerGradientView *gradientViewSaturation;
-@property (weak, nonatomic) IBOutlet NEOColorPickerGradientView *gradientViewLuminosity;
-@property (weak, nonatomic) IBOutlet NEOColorPickerGradientView *gradientViewAlpha;
-@property (weak, nonatomic) IBOutlet UIImageView *checkeredView;
-@property (weak, nonatomic) IBOutlet UIButton *buttonSatMin;
-@property (weak, nonatomic) IBOutlet UIButton *buttonSatMax;
-@property (weak, nonatomic) IBOutlet UIButton *buttonLumMax;
-@property (weak, nonatomic) IBOutlet UIButton *buttonLumMin;
-@property (weak, nonatomic) IBOutlet UIButton *buttonAlphaMax;
-@property (weak, nonatomic) IBOutlet UIButton *buttonAlphaMin;
-@property (weak, nonatomic) IBOutlet UILabel *labelTransparency;
-@property (weak, nonatomic) IBOutlet UILabel *labelPreview;
+@property (unsafe_unretained, nonatomic) IBOutlet UIImageView *hueImageView;
+@property (unsafe_unretained, nonatomic) IBOutlet UIImageView *hueCrosshair;
+@property (unsafe_unretained, nonatomic) IBOutlet NEOColorPickerGradientView *gradientViewSaturation;
+@property (unsafe_unretained, nonatomic) IBOutlet NEOColorPickerGradientView *gradientViewLuminosity;
+@property (unsafe_unretained, nonatomic) IBOutlet NEOColorPickerGradientView *gradientViewAlpha;
+@property (unsafe_unretained, nonatomic) IBOutlet UIImageView *checkeredView;
+@property (unsafe_unretained, nonatomic) IBOutlet UIButton *buttonSatMin;
+@property (unsafe_unretained, nonatomic) IBOutlet UIButton *buttonSatMax;
+@property (unsafe_unretained, nonatomic) IBOutlet UIButton *buttonLumMax;
+@property (unsafe_unretained, nonatomic) IBOutlet UIButton *buttonLumMin;
+@property (unsafe_unretained, nonatomic) IBOutlet UIButton *buttonAlphaMax;
+@property (unsafe_unretained, nonatomic) IBOutlet UIButton *buttonAlphaMin;
+@property (unsafe_unretained, nonatomic) IBOutlet UILabel *labelTransparency;
+@property (unsafe_unretained, nonatomic) IBOutlet UILabel *labelPreview;
 
 - (IBAction)buttonPressMaxMin:(id)sender;
 

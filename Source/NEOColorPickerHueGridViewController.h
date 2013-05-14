@@ -26,8 +26,8 @@
 
 @interface NEOColorPickerHueGridViewController : NEOColorPickerBaseViewController
 
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet UIImageView *colorBar;
-@property (weak, nonatomic) IBOutlet UILabel *selectedColorLabel;
+@property (unsafe_unretained, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (unsafe_unretained, nonatomic) IBOutlet UIImageView *colorBar;
+@property (unsafe_unretained, nonatomic) IBOutlet UILabel *selectedColorLabel;
 
 @end

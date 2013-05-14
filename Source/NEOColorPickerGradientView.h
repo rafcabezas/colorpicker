@@ -35,7 +35,7 @@
 
 @interface NEOColorPickerGradientView : UIView
 
-@property (nonatomic, weak) id <NEOColorPickerGradientViewDelegate> delegate;
+@property (nonatomic, unsafe_unretained) id <NEOColorPickerGradientViewDelegate> delegate;
 
 @property (nonatomic, strong) UIColor *color1;
 @property (nonatomic, strong) UIColor *color2;

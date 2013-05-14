@@ -28,7 +28,7 @@
 
 @interface NEOColorPickerHueGridViewController () <UIScrollViewDelegate>
 
-@property (nonatomic, weak) CALayer *selectedColorLayer;
+@property (nonatomic, unsafe_unretained) CALayer *selectedColorLayer;
 @property (nonatomic, strong) NSMutableArray *hueColors;
 
 @end
