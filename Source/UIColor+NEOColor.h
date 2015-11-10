@@ -28,16 +28,16 @@
 
 + (UIColor *) neoRandomColor;
 
-- (CGFloat) neoLuminosity;
+@property (NS_NONATOMIC_IOSONLY, readonly) CGFloat neoLuminosity;
 
-- (CGFloat) neoAlpha;
+@property (NS_NONATOMIC_IOSONLY, readonly) CGFloat neoAlpha;
 
 - (UIColor *) neoColorWithAlpha:(CGFloat) alpha;
 
-- (UIColor *) neoToHSL;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) UIColor *neoToHSL;
 
-- (UIColor *) neoComplementary;
-- (UIColor *)neoContrastingBW;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) UIColor *neoComplementary;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) UIColor *neoContrastingBW;
 
 - (BOOL) neoIsEqual:(UIColor *)color;
 @end

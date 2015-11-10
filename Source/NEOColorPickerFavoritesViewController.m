@@ -34,7 +34,7 @@
 
 @implementation NEOColorPickerFavoritesViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -71,7 +71,7 @@
     
     NSOrderedSet *colors = [NEOColorPickerFavoritesManager instance].favoriteColors;
     UIColor *pattern = [UIColor colorWithPatternImage:[UIImage imageNamed:@"colorPicker.bundle/color-picker-checkered"]];
-    int count = [colors count];
+    int count = colors.count;
     for (int i = 0; i < count; i++) {
         int page = i / 24;
         int x = i % 24;
@@ -87,7 +87,7 @@
         
         CALayer *layer = [CALayer layer];
         layer.cornerRadius = 6.0;
-        UIColor *color = [colors objectAtIndex:i];
+        UIColor *color = colors[i];
         layer.backgroundColor = color.CGColor;
         layer.frame = frame;
         [self setupShadow:layer];
@@ -121,9 +121,9 @@
     int column = (int)((delta - 8) / 78);
     int index = 24 * page + row * 4 + column;
     
-    if (index < [[NEOColorPickerFavoritesManager instance].favoriteColors count])
+    if (index < ([NEOColorPickerFavoritesManager instance].favoriteColors).count)
     {
-        self.selectedColor = [[NEOColorPickerFavoritesManager instance].favoriteColors objectAtIndex:index];
+        self.selectedColor = ([NEOColorPickerFavoritesManager instance].favoriteColors)[index];
         self.selectedColorLayer.backgroundColor = self.selectedColor.CGColor;
         [self.selectedColorLayer setNeedsDisplay];
         if ([self.delegate respondsToSelector:@selector(colorPickerViewController:didChangeColor:)]) {

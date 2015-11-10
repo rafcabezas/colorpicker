@@ -35,7 +35,7 @@
 
 @implementation NEOColorPickerHueGridViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -91,7 +91,7 @@
         for (int x = 0; x < colorCount && index < self.hueColors.count; x++) {
             CALayer *layer = [CALayer layer];
             layer.cornerRadius = 6.0;
-            UIColor *color = [self.hueColors objectAtIndex:index++];
+            UIColor *color = (self.hueColors)[index++];
             layer.backgroundColor = color.CGColor;
             
             int column = x % 4;
@@ -131,7 +131,7 @@
     int colorCount = NEOColorPicker4InchDisplay() ? 32 : 24;
     int index = colorCount * page + row * 4 + column;
 	if (index < self.hueColors.count) {
-		self.selectedColor = [self.hueColors objectAtIndex:index];
+		self.selectedColor = (self.hueColors)[index];
 		self.selectedColorLayer.backgroundColor = self.selectedColor.CGColor;
 		[self.selectedColorLayer setNeedsDisplay];
 

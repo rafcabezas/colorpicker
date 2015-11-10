@@ -41,7 +41,7 @@
 
 @implementation NEOColorPickerViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         _colorArray = [NSMutableArray array];
@@ -73,19 +73,19 @@
     }
     self.simpleColorGrid.backgroundColor = [UIColor clearColor];
     
-    [self.buttonHue setBackgroundColor:[UIColor clearColor]];
+    (self.buttonHue).backgroundColor = [UIColor clearColor];
 //    [NTTAppDefaults setupSecondaryButton:self.buttonHue];
     [self.buttonHue setImage:[UIImage imageNamed:@"colorPicker.bundle/hue_selector"] forState:UIControlStateNormal];
     
-    [self.buttonAddFavorite setBackgroundColor:[UIColor clearColor]];
+    (self.buttonAddFavorite).backgroundColor = [UIColor clearColor];
 //    [NTTAppDefaults setupSecondaryButton:self.buttonAddFavorite];
     [self.buttonAddFavorite setImage:[UIImage imageNamed:@"colorPicker.bundle/picker-favorites-add"] forState:UIControlStateNormal];
     
-    [self.buttonFavorites setBackgroundColor:[UIColor clearColor]];
+    (self.buttonFavorites).backgroundColor = [UIColor clearColor];
 //    [NTTAppDefaults setupSecondaryButton:self.buttonFavorites];
     [self.buttonFavorites setImage:[UIImage imageNamed:@"colorPicker.bundle/picker-favorites"] forState:UIControlStateNormal];
     
-    [self.buttonHueGrid setBackgroundColor:[UIColor clearColor]];
+    (self.buttonHueGrid).backgroundColor = [UIColor clearColor];
 //    [NTTAppDefaults setupSecondaryButton:self.buttonHueGrid];
     [self.buttonHueGrid setImage:[UIImage imageNamed:@"colorPicker.bundle/picker-grid"] forState:UIControlStateNormal];
     
@@ -110,7 +110,7 @@
     for (int i = 0; i < colorCount && i < _colorArray.count; i++) {
         CALayer *layer = [CALayer layer];
         layer.cornerRadius = 6.0;
-        UIColor *color = [_colorArray objectAtIndex:i];
+        UIColor *color = _colorArray[i];
         layer.backgroundColor = color.CGColor;
         
         int column = i % 4;
@@ -153,7 +153,7 @@
     int index = row * 4 + column;
 	
 	if (index < _colorArray.count) {
-		self.selectedColor = [_colorArray objectAtIndex:index];
+		self.selectedColor = _colorArray[index];
 	}
     [self updateSelectedColor];
 }
